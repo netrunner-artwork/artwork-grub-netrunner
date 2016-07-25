@@ -1,11 +1,11 @@
-Source: netrunner-artwork-grub
+Source: artwork-grub-netrunner
 Section: admin
 Priority: optional
 Maintainer: Leszek Lesner <leszek@zevenos.com>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.7.2
 
-Package: netrunner-artwork-grub
+Package: artwork-grub-netrunner
 Architecture: all
 Replaces: netrunner-system (<< 1.1.4)
 Breaks: netrunner-system (<< 1.1.4)
