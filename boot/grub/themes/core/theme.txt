@@ -1,5 +1,4 @@
 # Copyright (C) 2016 Harald Sitter <sitter@kde.org>
-# Copyright (C) 2016 Uri Herrera <uri_herrera@nitrux.in>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as
@@ -17,50 +16,50 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# paperwhite - #fcfcfc
+# icongrey - #4d4d4d
+# plasmablue - #3daee9
+# black - #000000
+
 # Global Property
 # General settings
 title-text: ""
-title-font: "DejaVu Sans Mono Regular 12"
-
-message-font: "DejaVu Sans Mono Regular 12"
-message-color: "#FAFAFA"
-message-bg-color: "#B0BEC5" # TODO: whatever this is for?
-
-desktop-image: "grub_background.png" # background
-
-terminal-box: "terminal/terminal_*.png" # FIXME: after selection the terminal box shows up. no clue why.
-terminal-font: "DejaVu Sans Mono Regular 12"
+title-font: "Unifont Regular 14"
+message-font: "Unifont Regular 14"
+message-color: "#7f8c8d"
+message-bg-color: "#4d4d4d" # TODO: whatever is this for?
+desktop-color: "#000000" # black
 
 # title
 # NOTE: can't put this in a vbox because GRUB is crap and item highlighting
 #   is broken if you put the boot_menu in a vbox...
 # TODO: file bug report
-+ label { 
-    width = 392
-    top = 50%-196
-    left = 50%-196
++ label {
+    top = 50%-214  # (150+32+32) menu + height + spacer
+    left = 0%
+    width = 100%
     text = "Select Operating System"
-    font = "DejaVu Sans Mono Regular 32"
-    color = "#B0BEC5"
+    align = "center"
+    font = "Unifont Regular 32"
+    color = "#ffffff"
 }
 
 # Show the boot menu
 + boot_menu {
-    item_font =  "DejaVu Sans Mono Bold 12"
+    item_font =  "Unifont Regular 16"
     left = 50%-200
     width = 400
     top = 50%-150
     height = 300
-    item_color = "#FAFAFA"
-    selected_item_color = "#FAFAFA"
+    item_color = "#7f8c8d" # paperwhite
     icon_width = 4
     icon_height = 0
     item_height = 33
     item_padding = 1
     item_icon_space = 0
     item_spacing = 1
-    selected_item_color = "#FAFAFA"
-    selected_item_pixmap_style = "highlight_*.png"
+    selected_item_font = "Unifont Bold 16"
+    selected_item_color = "#ffffff"
 }
 
 # Show a styled horizontal progress bar
@@ -82,19 +81,19 @@ terminal-font: "DejaVu Sans Mono Regular 12"
     top = 100%-32
     height = 32
     show_text = true
-    font = "DejaVu Sans Mono Regular 12"
-    text_color = "#FAFAFA"
+    font = "Unifont Regular 14"
+    text_color = "#7f8c8d"
     align = "right"
     text = "@TIMEOUT_NOTIFICATION_MIDDLE@"
     bar_style = "progress_bar2_*.png"    
 }
 
-# Show an informational message.
-+ label { 
-    top = 100%-24
-    left = 16
-    text = "[Enter] Boot the selected OS [C] GRUB Command Line"
-    font = "DejaVu Sans Mono Regular 12"
-    color = "#FAFAFA"
++ vbox {
+    left = 50%-200 # same as menu
+    top = 50%+264 # (150+64) half menu + spacer
+    width = 400 # same as menu
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Enter] Boot the selected OS" }
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Up and Down Key] navigation" }
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[E] Edit Selection" }
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[C] GRUB Command Line" }
 }
-
