@@ -9,6 +9,5 @@ Package: artwork-grub-theme-netrunner-black
 Architecture: all
 Replaces: netrunner-system (<< 1.1.4)
 Breaks: netrunner-system (<< 1.1.4)
-Depends: grub-theme2-common
 Description: Grub artwork
   This package provides the grub theme for Netrunner.
