@@ -7,6 +7,7 @@ Standards-Version: 3.7.2
 
 Package: artwork-grub-theme-netrunner-black
 Architecture: all
+Multi-Arch: foreign
 Replaces: netrunner-system (<< 1.1.4)
 Breaks: netrunner-system (<< 1.1.4)
 Description: Grub artwork
